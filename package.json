@@ -1,0 +1,19 @@
+{
+  "name": "BackndLc",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "git@github.com:engdeema/BackndLc.git",
+  "author": "<eng.dburhama@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.4",
+    "mongoose-slug-plugin": "^2.1.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4"
+  },
+  "scripts": {
+    "start": "nodemon app.js"
+  }
+}

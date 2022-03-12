@@ -15,9 +15,11 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(logger);
+app.use(errorHandler);
 
 app.use("/api/sweets", sweetRoutes);
 app.use("/media", express.static(path.join(__dirname, "media")));
 app.use(errorHandler);
 
-app.listen(8080, () => console.log(`This app is running on local host:8080`));
+const PORT = 8080;
+app.listen(PORT, () => console.log(`Application running on localhost:${PORT}`));

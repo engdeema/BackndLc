@@ -5,4 +5,4 @@ const SweetSchema = Schema({
   description: { type: String },
 });
 
-module.exports = model("Sweet", SweetSchema);
+module.exports = model("sweets", SweetSchema);

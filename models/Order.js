@@ -1,8 +1,12 @@
 const { model, Schema } = require("mongoose");
-const SweetSchema = Schema({
+const OrderSchema = Schema({
   name: { type: String },
   image: { type: String },
   description: { type: String },
+  quantity: {
+    type: Number,
+    default: 5,
+  },
 });
 
-module.exports = model("Sweet", SweetSchema);
+module.exports = model("Order", OrderSchema);

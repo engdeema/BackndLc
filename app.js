@@ -5,6 +5,8 @@ const morgan = require("morgan");
 const path = require("path");
 
 const sweetRoutes = require("./api/sweet/sweet.routes");
+const orderRoutes = require("./api/order/order.routes");
+
 const connectDB = require("./db");
 
 const logger = require("./middleware/logger");
@@ -18,6 +20,7 @@ app.use(logger);
 app.use(errorHandler);
 
 app.use("/api/sweets", sweetRoutes);
+app.use("/api/orders", orderRoutes);
 app.use("/media", express.static(path.join(__dirname, "media")));
 app.use(errorHandler);
 
